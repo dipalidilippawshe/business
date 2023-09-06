@@ -8,6 +8,9 @@ app.listen(PORT,()=>{
     console.log("PORT: ", PORT);
 });
 
+app.get("/status", async(request,response)=>{
+    response.end("hello");
+});
 app.post("/qrcode",async(request,response)=>{
     try{
         const qr = await whatsappqr(request);
